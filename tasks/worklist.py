@@ -16,7 +16,7 @@ class Elem():
         return "{}, {} to {}".format(self.state, self.start_date, self.end_date)
 
 
-def maping_emptys(list : [Elem]) -> [Elem]:
+def maping_emptys(list : list[Elem]) -> list[Elem]:
     """
         Mapea una lista uniendo los elementos vacios consecutivos y devuelve la lista resultante
 
@@ -49,11 +49,12 @@ def maping_emptys(list : [Elem]) -> [Elem]:
     
     return new_list
 
-def emptys_gen(list : [Elem], perc : int = 1) -> [Elem]:
+def emptys_gen(list : list[Elem], perc : int = 1) -> list[Elem]:
     """
         Mapea una lista separando los elementos vacios por un percentil y devuelve la lista resultante
 
         list --> lista de elementos
+
         perc --> perceptil para generar espacios
 
         raise --> si el perc es negativo
@@ -81,11 +82,12 @@ def emptys_gen(list : [Elem], perc : int = 1) -> [Elem]:
     
     return new_list
 
-def fill_emptys(list : [Elem], h1 : int = 0, h2 : int = 24) -> [Elem]:
+def fill_emptys(list : list[Elem], h1 : int = 0, h2 : int = 24) -> list[Elem]:
     """
         Mapea una lista rellenando los horarios vacios entre elementos y devuelve la lista resultante
 
         h1 --> cota menor
+
         h2 --> cota superior
 
         raise --> si los h son negativos o si h1 > h2
